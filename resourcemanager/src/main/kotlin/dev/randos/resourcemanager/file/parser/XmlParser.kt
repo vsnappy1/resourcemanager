@@ -57,7 +57,7 @@ internal object XmlParser {
         resources: MutableList<ValueResource>
     ) {
         val tagName = node.tagName
-        val attributeName = node.getAttribute("name")
+        val attributeName = node.getAttribute("name").replace(".", "_")
 
         when (tagName) {
             STRING_TAG -> {

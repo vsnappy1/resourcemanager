@@ -1,4 +1,5 @@
 import com.android.build.gradle.BaseExtension
+import com.google.devtools.ksp.gradle.KspAATask
 import dev.randos.resourcemanager.ResourceManagerGenerator
 import dev.randos.resourcemanager.manager.ModuleManager
 import dev.randos.resourcemanager.manager.ResourceManager
@@ -52,6 +53,13 @@ class ResourceManagerPlugin : Plugin<Project> {
         // Specifically handle kapt stubs generation in case if consuming project has kotlin-kapt plugin applied.
         project.pluginManager.withPlugin("kotlin-kapt") {
             project.tasks.withType<KaptGenerateStubs>().configureEach {
+                dependsOn(generateResourceManagerTask)
+            }
+        }
+
+        // Specifically handle KSP tasks in case the consuming project has the KSP plugin applied.
+        project.pluginManager.withPlugin("com.google.devtools.ksp") {
+            project.tasks.withType<KspAATask>().configureEach {
                 dependsOn(generateResourceManagerTask)
             }
         }

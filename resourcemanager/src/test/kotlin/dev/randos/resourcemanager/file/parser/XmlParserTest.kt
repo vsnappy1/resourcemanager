@@ -70,6 +70,6 @@ class XmlParserTest {
         assertTrue(map["array_mixed"]?.first()?.type is ValueResourceType.StringArray)
         assertTrue(map["int_array_res"]?.first()?.type is ValueResourceType.IntArray)
         assertTrue(map["plurals_res"]?.first()?.type is ValueResourceType.Plural)
-        assertEquals(15, valueResources.size)
+        assertEquals(16, valueResources.size)
     }
 }

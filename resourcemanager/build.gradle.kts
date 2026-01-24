@@ -14,7 +14,7 @@ apply(from = "../gradle/jacoco.gradle.kts")
 val agp: String by project
 val kotlinVersion: String by project
 val pluginGroup = "dev.randos"
-val pluginVersion = "0.1.1"
+val pluginVersion = "0.1.2"
 val pluginName = "resourcemanager"
 
 dependencies {
@@ -22,6 +22,7 @@ dependencies {
     compileOnly(localGroovy())
     compileOnly(libs.android.tools)
     compileOnly(libs.kotlin.gradle.plugin)
+    compileOnly("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:1.9.22-1.0.16")
     testImplementation(libs.junit)
     testImplementation(libs.mockk)
     testImplementation(gradleTestKit())

@@ -16,7 +16,7 @@ Add resourcemanager plugin to your project's root __build.gradle(.kts)__ file.
 // If your project uses the plugins block, add the following:
 plugins {
     id("com.android.application") version "8.0.1" apply false
-    id("dev.randos.resourcemanager") version "0.1.1" apply false
+    id("dev.randos.resourcemanager") version "0.1.2" apply false
     ....
 }
 
@@ -24,7 +24,7 @@ plugins {
 buildScripts {
     dependencies {
         classpath "com.android.tools.build:gradle:8.0.1"
-        classpath 'dev.randos:resourcemanager:0.1.1'
+        classpath 'dev.randos:resourcemanager:0.1.2'
         ....
     }
 ```

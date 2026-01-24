@@ -1,6 +1,7 @@
 <resources>
     <string name="string_res">My Application</string>
     <string name="string_parameterized_res">Hello %s</string>
+    <string name="com.crashlytics.android.build_id">none</string>
     <bool name="bool_res">false</bool>
     <color name="color_res">#FF000000</color>
     <color name="colorResCamelCase">#FF000000</color>

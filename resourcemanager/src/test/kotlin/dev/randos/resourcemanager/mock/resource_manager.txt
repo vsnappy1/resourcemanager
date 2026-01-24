@@ -137,6 +137,7 @@ object ResourceManager {
 	 * the appropriate context (e.g., an `Activity` context) to the function.
 	 */
 	object Strings {
+		@JvmOverloads @JvmStatic fun comCrashlyticsAndroidBuildId(vararg args: Any? = emptyArray(), context: Context = application) : String = if (args.isEmpty()) context.resources.getString(R.string.com_crashlytics_android_build_id) else context.resources.getString(R.string.com_crashlytics_android_build_id, *args)
 		@JvmOverloads @JvmStatic fun stringParameterizedRes(vararg args: Any? = emptyArray(), context: Context = application) : String = if (args.isEmpty()) context.resources.getString(R.string.string_parameterized_res) else context.resources.getString(R.string.string_parameterized_res, *args)
 		@JvmOverloads @JvmStatic fun stringParameterizedResMod_lib1(vararg args: Any? = emptyArray(), context: Context = application) : String = if (args.isEmpty()) context.resources.getString(com.example.lib1.R.string.string_parameterized_res_mod) else context.resources.getString(com.example.lib1.R.string.string_parameterized_res_mod, *args)
 		@JvmOverloads @JvmStatic fun stringRes(vararg args: Any? = emptyArray(), context: Context = application) : String = if (args.isEmpty()) context.resources.getString(R.string.string_res) else context.resources.getString(R.string.string_res, *args)
