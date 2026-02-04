@@ -8,6 +8,8 @@ ResourceManager is an Android plugin that simplifies accessing Android resources
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
 </p>
 
+![resource-manager](https://github.com/user-attachments/assets/1faf122b-0fd2-4acd-9583-c0d14b22e4a8)
+
 ## Setup
 
 ### Step 1: Add ResourceManager Plugin
